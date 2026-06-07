@@ -538,7 +538,7 @@ export default function App() {
                     type="text" 
                     value={data.ticketNo}
                     onChange={e => setData(prev => ({ ...prev, ticketNo: e.target.value }))}
-                    placeholder="Enter Ticket Reference"
+                    placeholder="Enter Ticket Number"
                     className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-mono"
                   />
                 </div>
@@ -556,6 +556,7 @@ export default function App() {
                       <option value="" disabled>Select Customer</option>
                       <option value="Bytedance">Bytedance</option>
                       <option value="Speed Matrix">Speed Matrix</option>
+                       <option value="Shopee">Shopee</option>
                     </select>
                   </div>
                 </div>
@@ -566,7 +567,7 @@ export default function App() {
                     type="text" 
                     value={data.serverSn}
                     onChange={e => setData(prev => ({ ...prev, serverSn: e.target.value }))}
-                    placeholder="e.g. SN1294819"
+                    placeholder="eg. SN1294819"
                     className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-mono"
                   />
                 </div>
@@ -590,7 +591,7 @@ export default function App() {
                     type="text" 
                     value={data.signatureName}
                     onChange={e => setData(prev => ({ ...prev, signatureName: e.target.value }))}
-                    placeholder="Enter signee name"
+                    placeholder="Enter engineer name"
                     className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium"
                   />
                 </div>
@@ -607,7 +608,7 @@ export default function App() {
               ) : (
                 <>
                   <Download size={18} />
-                  Generate High-Fidelity PDF
+                  Generate PDF
                 </>
               )}
             </button>
