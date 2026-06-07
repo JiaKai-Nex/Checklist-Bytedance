@@ -471,8 +471,7 @@ export default function App() {
 
       // Signatures Underline row at the absolute footer
       const sigY = 22;
-      page.drawText("Signature of maintenance engineer:" + (data.signatureName || ""), { x: x_no, y: sigY, size: 7.5, font: fontBold });
-      page.drawLine({ start: { x: x_no + 138, y: sigY - 2 }, end: { x: x_no + 260, y: sigY - 2 }, thickness: 0.5, color: rgb(0.1, 0.1, 0.1) });
+      page.drawText("Signature of maintenance engineer: " + (data.signatureName || ""), { x: x_no, y: sigY, size: 7.5, font: fontBold });
 
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
