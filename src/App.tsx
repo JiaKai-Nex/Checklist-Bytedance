@@ -477,8 +477,11 @@ export default function App() {
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
+      const snCleaned = data.serverSn ? data.serverSn.trim().replace(/[^a-zA-Z0-9_-]/g, '_') : '';
+      const fallbackPart = data.customerName ? data.customerName.replace(/\s+/g, '_') : 'Checklist';
+      const fileIdentifier = snCleaned || fallbackPart;
       link.href = url;
-      link.download = `Server_Maintenance_Checklist_${data.customerName.replace(/\s+/g, '_')}_${data.maintenanceTime}.pdf`;
+      link.download = `Checklist_${fileIdentifier}_${data.maintenanceTime}.pdf`;
       link.click();
       URL.revokeObjectURL(url);
     } catch (err: any) {
