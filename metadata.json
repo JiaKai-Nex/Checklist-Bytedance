@@ -1,0 +1,5 @@
+{
+  "name": "Server Checklist Generator",
+  "description": "Automated tool to fill out customer version server maintenance risk identification forms with auto-fill logic for common hardware replacements.",
+  "requestFramePermissions": []
+}
